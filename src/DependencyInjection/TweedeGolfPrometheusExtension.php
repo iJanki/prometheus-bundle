@@ -29,6 +29,7 @@ class TweedeGolfPrometheusExtension extends Extension
         $registry = new Definition(CollectorRegistry::class, [
             new Reference($config['storage_adapter_service'])
         ]);
+        $registry->setPublic(true);
         $container->setDefinition(CollectorRegistry::class, $registry);
 
         foreach ($config['collectors'] as $name => $collector) {
