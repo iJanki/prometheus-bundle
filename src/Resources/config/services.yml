@@ -8,3 +8,7 @@ services:
     TweedeGolf\PrometheusBundle\Controller\:
         resource: '../../Controller'
         tags: ['controller.service_arguments']
+
+    TweedeGolf\PrometheusBundle\EventSubscriber\EventSubscriber:
+        tags:
+        - { name: kernel.event_subscriber }
