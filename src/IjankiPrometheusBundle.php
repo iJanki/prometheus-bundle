@@ -1,13 +1,13 @@
 <?php
 
-namespace TweedeGolf\PrometheusBundle;
+namespace Ijanki\Bundle\PrometheusBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use TweedeGolf\PrometheusBundle\DependencyInjection\CollectorCompilerPass;
-use TweedeGolf\PrometheusBundle\DependencyInjection\StorageAdapterCompilerPass;
+use Ijanki\Bundle\PrometheusBundle\DependencyInjection\CollectorCompilerPass;
+use Ijanki\Bundle\PrometheusBundle\DependencyInjection\StorageAdapterCompilerPass;
 
-class TweedeGolfPrometheusBundle extends Bundle
+class IjankiPrometheusBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

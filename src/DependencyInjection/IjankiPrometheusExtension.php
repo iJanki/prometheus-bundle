@@ -1,6 +1,6 @@
 <?php
 
-namespace TweedeGolf\PrometheusBundle\DependencyInjection;
+namespace Ijanki\Bundle\PrometheusBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -15,7 +15,7 @@ use TweedeGolf\PrometheusClient\CollectorRegistry;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class TweedeGolfPrometheusExtension extends Extension
+class IjankiPrometheusExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -25,7 +25,7 @@ class TweedeGolfPrometheusExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('tweede_golf_prometheus.metrics_path', $config['metrics_path']);
+        $container->setParameter('ijanki_prometheus.metrics_path', $config['metrics_path']);
         $registry = new Definition(CollectorRegistry::class, [
             new Reference($config['storage_adapter_service'])
         ]);

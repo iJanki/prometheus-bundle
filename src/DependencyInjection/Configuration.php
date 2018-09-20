@@ -1,6 +1,6 @@
 <?php
 
-namespace TweedeGolf\PrometheusBundle\DependencyInjection;
+namespace Ijanki\Bundle\PrometheusBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -21,7 +21,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('tweede_golf_prometheus');
+        $rootNode = $treeBuilder->root('ijanki_prometheus');
 
         $rootNode
             ->children()

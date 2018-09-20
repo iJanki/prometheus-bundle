@@ -5,10 +5,10 @@ services:
     TweedeGolf\PrometheusClient\Storage\ApcuAdapter: ~
     TweedeGolf\PrometheusClient\Storage\ApcAdapter: ~
 
-    TweedeGolf\PrometheusBundle\Controller\:
+    Ijanki\Bundle\PrometheusBundle\Controller\:
         resource: '../../Controller'
         tags: ['controller.service_arguments']
 
-    TweedeGolf\PrometheusBundle\EventSubscriber\EventSubscriber:
+    Ijanki\Bundle\PrometheusBundle\EventSubscriber\EventSubscriber:
         tags:
         - { name: kernel.event_subscriber }

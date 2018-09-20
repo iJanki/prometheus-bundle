@@ -4,13 +4,17 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "TweedeGolf\\PrometheusBundle\\": "src/"
+            "Ijanki\\Bundle\\PrometheusBundle\\": "src/"
         }
     },
     "authors": [
         {
             "name": "Ruben Nijveld",
             "email": "ruben@tweedegolf.com"
+        },
+        {
+            "name": "Daniele Cesarini",
+            "email": "daniele.cesarini@gmail.com"
         }
     ],
     "require": {

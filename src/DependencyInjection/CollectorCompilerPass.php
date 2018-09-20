@@ -1,6 +1,6 @@
 <?php
 
-namespace TweedeGolf\PrometheusBundle\DependencyInjection;
+namespace Ijanki\Bundle\PrometheusBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -16,7 +16,7 @@ class CollectorCompilerPass implements CompilerPassInterface
         }
 
         $definition = $container->findDefinition(CollectorRegistry::class);
-        $taggedServices = $container->findTaggedServiceIds('tweede_golf_prometheus.collector');
+        $taggedServices = $container->findTaggedServiceIds('ijanki_prometheus.collector');
 
         foreach ($taggedServices as $id => $tags) {
             $definition->addMethodCall('register', [new Reference($id)]);
