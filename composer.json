@@ -1,6 +1,7 @@
 {
     "name": "ijanki/prometheus-bundle",
-    "description": "Symfony bundle for Prometheus client",
+    "description": "Symfony bundle for Prometheus client with opinionated event listener",
+    "type": "symfony-bundle",
     "license": "MIT",
     "autoload": {
         "psr-4": {
