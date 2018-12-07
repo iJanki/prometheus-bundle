@@ -13,11 +13,15 @@ use TweedeGolf\PrometheusClient\PrometheusException;
 class EventSubscriber implements EventSubscriberInterface
 {
     protected $prometheus;
+    protected $startTime;
 
     public static function getSubscribedEvents()
     {
         // return the subscribed events, their methods and priorities
         return [
+            KernelEvents::REQUEST => [
+                ['setStartTime', 10],
+            ],
             KernelEvents::TERMINATE => [
                 ['updatePrometheusCounters', 10],
             ],
@@ -26,8 +30,12 @@ class EventSubscriber implements EventSubscriberInterface
 
     public function __construct(CollectorRegistry $prometheus)
     {
-        $this->startTime = microtime(true);
         $this->prometheus = $prometheus;
+    }
+
+    public function setStartTime(GetResponseEvent $event)
+    {
+        $this->startTime = microtime(true);
     }
 
     public function updatePrometheusCounters(PostResponseEvent $event)
